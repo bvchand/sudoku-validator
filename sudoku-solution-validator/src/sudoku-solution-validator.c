@@ -8,41 +8,13 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <string.h>
-
-#define INPUT_MATRIX "input_matrix.txt"
-#define COLUMNS 9
-#define ROWS 9
-
-typedef struct {
-	int row;
-	int column;
-	int (*matrix)[ROWS];
-}parameters;
-
+#include "sudoku-solution-validator.h"
+#include "single-threaded-validotor.h"
 
 int main(void) {
-	FILE *fp;
-	int matrix[COLUMNS][ROWS];
+	int *matrix[ROWS][COLUMNS];
 
-	fp = fopen(INPUT_MATRIX, "r");
-
-	if(fp == NULL){
-			printf("UNABLE TO OPEN THE FILE: %s \n", INPUT_MATRIX);
-			exit(1);
-		}
-	else{
-		for(int col=0; col < COLUMNS; col++){
-			for(int row=0; row < ROWS; row++){
-				fscanf(fp, "%d", &matrix[col][row]);
-			}
-			printf("\n");
-		}
-	}
-	fclose(fp);
+	readMatrix(matrix);
 
 	for(int i=0; i<ROWS; i++) {
 		for(int j=0; j<COLUMNS; j++){
@@ -53,7 +25,30 @@ int main(void) {
 
 
 	//display sudoku matrix
-	printf("CURRENTLY SOLVING --\n");
+	printf("\n----------CURRENTLY SOLVING----------\n\n");
+	singleThreadedValidator(matrix);
 
+}
+
+void readMatrix(int *matrix[ROWS][COLUMNS]) {
+	FILE *fp;
+
+	fp = fopen(INPUT_MATRIX, "r");
+
+	if(fp == NULL){
+			printf("UNABLE TO OPEN THE FILE: %s \n", INPUT_MATRIX);
+			exit(1);
+		}
+	else{
+		for(int row=0; row < ROWS; row++){
+			for(int col=0; col < COLUMNS; col++){
+				fscanf(fp, "%d", &matrix[row][col]);
+			}
+		}
+	}
+	fclose(fp);
+}
+
+int checkForDuplicate(int nums[]){
 
 }
