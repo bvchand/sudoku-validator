@@ -9,7 +9,7 @@
  */
 
 #include "sudoku-solution-validator.h"
-#include "single-threaded-validotor.h"
+#include "single-threaded-validator.h"
 
 int main(void) {
 	int *matrix[ROWS][COLUMNS];
@@ -23,10 +23,14 @@ int main(void) {
 		printf("\n");
 	}
 
-
-	//display sudoku matrix
 	printf("\n----------CURRENTLY SOLVING----------\n\n");
-	singleThreadedValidator(matrix);
+
+	if(singleThreadedValidator(matrix)){
+		printf("\n\n Valid sudoku");
+	}
+	else {
+		printf("\n\n Invalid sudoku");
+	}
 
 }
 
@@ -47,8 +51,4 @@ void readMatrix(int *matrix[ROWS][COLUMNS]) {
 		}
 	}
 	fclose(fp);
-}
-
-int checkForDuplicate(int nums[]){
-
 }

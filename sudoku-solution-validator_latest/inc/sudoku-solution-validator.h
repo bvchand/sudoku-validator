@@ -10,6 +10,8 @@
 #include <pthread.h>
 #include <string.h>
 
+//#include "single-threaded-validator.h"
+
 #define INPUT_MATRIX "input_matrix.txt"
 #define COLUMNS 9
 #define ROWS 9
@@ -23,7 +25,6 @@ typedef struct {
 
 //int multiThreadedValidator(int board[ROWS][COLUMNS]);
 
-int checkForDuplicate(int nums[]);
 void readMatrix(int *matrix[ROWS][COLUMNS]);
 int main(void);
 
