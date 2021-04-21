@@ -12,7 +12,7 @@
 
 //#include "single-threaded-validator.h"
 
-#define INPUT_MATRIX "input_matrix.txt"
+#define INPUT_MATRIX "../input_matrix.txt"
 #define COLUMNS 9
 #define ROWS 9
 

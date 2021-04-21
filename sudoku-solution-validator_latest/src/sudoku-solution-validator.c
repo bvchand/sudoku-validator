@@ -8,8 +8,8 @@
  ============================================================================
  */
 
-#include "sudoku-solution-validator.h"
-#include "single-threaded-validator.h"
+#include "..\inc\sudoku-solution-validator.h"
+#include "..\inc\single-threaded-validator.h"
 
 int main(void) {
 	int *matrix[ROWS][COLUMNS];

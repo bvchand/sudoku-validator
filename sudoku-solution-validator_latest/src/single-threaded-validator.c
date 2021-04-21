@@ -8,7 +8,7 @@
  ============================================================================
  */
 
-#include "single-threaded-validator.h"
+#include "..\inc\single-threaded-validator.h"
 
 int checkValid(int* nums){
     int dupChecker[9] = {0,0,0,0,0,0,0,0,0};
