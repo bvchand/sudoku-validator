@@ -20,6 +20,9 @@
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.macosx.exe.debug.309132994" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.macosx.exe.debug"/>
 							<builder buildPath="${workspace_loc:/sudoku-solution-validator}/Debug" id="cdt.managedbuild.target.gnu.builder.macosx.exe.debug.2070055489" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.macosx.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug.1886522682" name="MacOS X C Linker" superClass="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="macosx.c.link.option.libs.71363171" superClass="macosx.c.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="pthread"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.macosx.c.linker.input.740189536" superClass="cdt.managedbuild.tool.macosx.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -27,9 +30,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1029100377" name="MacOS X C++ Linker" superClass="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.macosx.exe.debug.963686187" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.macosx.exe.debug">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.both.asm.option.include.paths.1037233751" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sudoku-solution-validator_v1.3/inc}&quot;"/>
-								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="gnu.both.asm.option.include.paths.1037233751" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.270404361" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.macosx.base.289554795" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.macosx.base"/>
@@ -41,8 +42,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.macosx.exe.debug.option.optimization.level.2025766850" name="Optimization Level" superClass="gnu.c.compiler.macosx.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.macosx.exe.debug.option.debugging.level.638034282" name="Debug Level" superClass="gnu.c.compiler.macosx.exe.debug.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.217482383" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/${ProjName}/inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sudoku-solution-validator_v1.3/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sudoku-solution-validator-v1.4/inc}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1094337806" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -107,19 +107,22 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="sudoku-solution-validator.cdt.managedbuild.target.macosx.exe.644167182" name="Executable" projectType="cdt.managedbuild.target.macosx.exe"/>
-	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1169462961;cdt.managedbuild.config.gnu.macosx.exe.debug.1169462961.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1650003945;cdt.managedbuild.tool.gnu.c.compiler.input.1094337806">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.macosx.exe.release.2144867339;cdt.managedbuild.config.macosx.exe.release.2144867339.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.release.704814726;cdt.managedbuild.tool.gnu.c.compiler.input.1051755815">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
+		<project id="sudoku-solution-validator-v1.4.cdt.managedbuild.target.macosx.exe.1309266298" name="Executable" projectType="cdt.managedbuild.target.macosx.exe"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1169462961;cdt.managedbuild.config.gnu.macosx.exe.debug.1169462961.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1650003945;cdt.managedbuild.tool.gnu.c.compiler.input.1094337806">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.macosx.exe.release.1881737078;cdt.managedbuild.config.macosx.exe.release.1881737078.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.release.1275027526;cdt.managedbuild.tool.gnu.c.compiler.input.1704582946">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1360483884;cdt.managedbuild.config.gnu.macosx.exe.debug.1360483884.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1320712104;cdt.managedbuild.tool.gnu.c.compiler.input.1175853042">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
 </cproject>

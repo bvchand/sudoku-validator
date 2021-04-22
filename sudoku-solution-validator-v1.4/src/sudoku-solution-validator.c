@@ -8,8 +8,8 @@
  ============================================================================
  */
 
-#include "..\inc\sudoku-solution-validator.h"
-#include "..\inc\single-threaded-validator.h"
+#include "../inc/single-threaded-validator.h"
+#include "../inc/multithreaded-validator.h"
 
 int main(void) {
 	int *matrix[ROWS][COLUMNS];
@@ -23,15 +23,19 @@ int main(void) {
 		printf("\n");
 	}
 
-	printf("\n----------CURRENTLY SOLVING----------\n\n");
+	printf("\n----------SINGLE THREADED VALIDATOR----------\n\n");
 
-	if(singleThreadedValidator(matrix)){
-		printf("\n\n Valid sudoku");
-	}
-	else {
-		printf("\n\n Invalid sudoku");
-	}
+	if(singleThreadedValidator(matrix))
+		printf("\n\nSudoku solution is valid");
+	else
+		printf("\n\nSudoku solution is invalid");
 
+	printf("\n----------MULTITHREADED VALIDATOR----------\n\n");
+
+	if(multiThreadedValidator(matrix))
+		printf("\n\nSudoku solution is valid");
+	else
+		printf("\n\nSudoku solution is invalid");
 }
 
 void readMatrix(int *matrix[ROWS][COLUMNS]) {
