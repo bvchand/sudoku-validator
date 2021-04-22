@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: sudoku-solution-validator-v1.4
+all: sudoku-solution-validator
 
 # Tool invocations
-sudoku-solution-validator-v1.4: $(OBJS) $(USER_OBJS)
+sudoku-solution-validator: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C Linker'
-	gcc  -o "sudoku-solution-validator-v1.4" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "sudoku-solution-validator" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) sudoku-solution-validator-v1.4
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) sudoku-solution-validator
 	-@echo ' '
 
 .PHONY: all clean dependents
