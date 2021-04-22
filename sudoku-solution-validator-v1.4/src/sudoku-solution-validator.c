@@ -22,20 +22,28 @@ int main(void) {
 		}
 		printf("\n");
 	}
-
+	clock_t start, end;
+    double cpu_time_used;
 	printf("\n----------SINGLE THREADED VALIDATOR----------\n\n");
-
+	start = clock();
 	if(singleThreadedValidator(matrix))
-		printf("\n\nSudoku solution is valid");
+		printf("\n\nSingle thread Sudoku solution is valid");
 	else
-		printf("\n\nSudoku solution is invalid");
+		printf("\n\nSingle thread Sudoku solution is invalid");
+	end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+	printf("\nSTV took %f seconds to execute \n", cpu_time_used);
 
 	printf("\n----------MULTITHREADED VALIDATOR----------\n\n");
 
+	start = clock();
 	if(multiThreadedValidator(matrix))
-		printf("\n\nSudoku solution is valid");
+		printf("\n\nMulti thread Sudoku solution is valid");
 	else
-		printf("\n\nSudoku solution is invalid");
+		printf("\n\nMulti thread Sudoku solution is invalid");
+	end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+	printf("\nMTV took %f seconds to execute \n", cpu_time_used);
 }
 
 void readMatrix(int *matrix[ROWS][COLUMNS]) {

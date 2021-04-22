@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <string.h>
+// #include <chrono>
+#include <time.h>
 
 #define INPUT_MATRIX "input_matrix.txt"
 #define COLUMNS 9
